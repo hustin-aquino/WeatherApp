@@ -59,7 +59,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Settings" id="FVz-SU-0pw"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="MAo-Hw-OMS">
                             <connections>
-                                <segue destination="sRf-bN-7Bd" kind="presentation" id="fzQ-5Q-JKk"/>
+                                <segue destination="sRf-bN-7Bd" kind="presentation" identifier="AddWeatherCityViewController" id="fzQ-5Q-JKk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -8,28 +8,26 @@
 import Foundation
 import UIKit
 
+protocol AddWeatherDelegate {
+    func addWeatherDidSave(vm: WeatherViewModel)
+}
+
 class AddWeatherCityViewController: UIViewController {
     
     @IBOutlet weak var cityNameTextField: UITextField!
     
+    private var addWeatherVM = AddWeatherViewModel()
+    
+    var delegate: AddWeatherDelegate?
+    
     
     @IBAction func saveCityButtonPressed(_ sender: UIButton) {
-        
         if let city = cityNameTextField.text {
-            
-            let weatherURL = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=81a0585697c9cd3fd655d47f896b1a7f&units=imperial")!
-            
-            let weatherResource = Resource<WeatherResponse>(url: weatherURL) { data in
-                
-                guard  let weatherResponse = try? JSONDecoder().decode(WeatherResponse.self, from: data) else {
-                    fatalError("Error in parsing WeatherResponse")
+            addWeatherVM.addWeather(for: city) { (vm) in
+                if let delegate = self.delegate {
+                    delegate.addWeatherDidSave(vm: vm)
+                    self.dismiss(animated: true, completion: nil)
                 }
-                
-                return weatherResponse
-            }
-            
-            Webservice().load(resource: weatherResource) { result in
-                
             }
         }
     }

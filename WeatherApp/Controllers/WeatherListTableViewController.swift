@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class WeatherListTableViewController: UITableViewController {
+class WeatherListTableViewController: UITableViewController, AddWeatherDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,16 +17,10 @@ class WeatherListTableViewController: UITableViewController {
     
     private func setup() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        
-        let resource = Resource<WeatherResponse>(url: URL(string: "https://api.openweathermap.org/data/2.5/weather?q=London&appid=81a0585697c9cd3fd655d47f896b1a7f&units=imperial")!) { data in
-            return try? JSONDecoder().decode(WeatherResponse.self, from: data)
-        }
-        
-        Webservice().load(resource: resource) { weatherResponse in
-            if let weatherResponse = weatherResponse {
-                print(weatherResponse)
-            }
-        }
+    }
+    
+    func addWeatherDidSave(vm: WeatherViewModel) {
+        print(vm)
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -48,5 +42,23 @@ class WeatherListTableViewController: UITableViewController {
         cell.cityNameLabel.text = "Houston"
         cell.temperatureLabel.text = "70°"
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddWeatherCityViewController" {
+            prepareSegueForAddWeatherCityViewController(segue: segue)
+        }
+    }
+    
+    func prepareSegueForAddWeatherCityViewController(segue: UIStoryboardSegue) {
+        guard let nav = segue.destination as? UINavigationController else {
+            fatalError("UINavigationController Not Found")
+        }
+        
+        guard let addWeatherCityVC = nav.viewControllers.first as? AddWeatherCityViewController else {
+            fatalError("AddWeatherCityViewController Not Found")
+        }
+        
+        addWeatherCityVC.delegate = self
     }
 }
