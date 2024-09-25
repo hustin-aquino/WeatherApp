@@ -19,8 +19,13 @@ class AddWeatherCityViewController: UIViewController {
             
             let weatherURL = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=81a0585697c9cd3fd655d47f896b1a7f&units=imperial")!
             
-            let weatherResource = Resource<Any>(url: weatherURL) { data in
-                return data
+            let weatherResource = Resource<WeatherResponse>(url: weatherURL) { data in
+                
+                guard  let weatherResponse = try? JSONDecoder().decode(WeatherResponse.self, from: data) else {
+                    fatalError("Error in parsing WeatherResponse")
+                }
+                
+                return weatherResponse
             }
             
             Webservice().load(resource: weatherResource) { result in
