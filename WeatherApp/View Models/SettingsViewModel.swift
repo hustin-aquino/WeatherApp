@@ -8,8 +8,8 @@
 import Foundation
 
 enum Unit: String, CaseIterable {
-    case celsius = "metric"
-    case fahrenheit = "imperial"
+    case celsius = "Metric"
+    case fahrenheit = "Imperial"
 }
 
 extension Unit {
