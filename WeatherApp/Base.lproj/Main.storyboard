@@ -58,7 +58,7 @@
                     <navigationItem key="navigationItem" title="Weather App" id="fNw-Xn-Cg9">
                         <barButtonItem key="leftBarButtonItem" title="Settings" id="FVz-SU-0pw">
                             <connections>
-                                <segue destination="3PH-BK-vF9" kind="presentation" id="U9O-f3-FPy"/>
+                                <segue destination="3PH-BK-vF9" kind="presentation" identifier="SettingsTableViewController" id="U9O-f3-FPy"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="MAo-Hw-OMS">
@@ -161,7 +161,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="Hgn-SA-zHN">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="FQA-Nj-hRs"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="FQA-Nj-hRs">
+                            <connections>
+                                <action selector="done:" destination="bXW-e8-wGj" id="Tlf-Ya-Nxa"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8uq-di-RIs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
