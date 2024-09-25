@@ -36,7 +36,7 @@ class SettingsViewModel {
                 unitValue = value
             }
             
-            return Unit(rawValue: unitValue)!
+            return Unit(rawValue: unitValue) ?? Unit.celsius
         }
         
         set {
