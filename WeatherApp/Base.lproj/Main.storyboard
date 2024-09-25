@@ -75,10 +75,41 @@
                     <view key="view" contentMode="scaleToFill" id="9j8-OV-drx">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TsM-zB-MH0">
+                                <rect key="frame" x="16" y="72" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFI-lm-cvC">
+                                <rect key="frame" x="166" y="132" width="61" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="saveCityButtonPressed:" destination="5sE-WG-6Ne" eventType="touchUpInside" id="FCk-Mi-beb"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="23e-j7-9S5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xFI-lm-cvC" firstAttribute="top" secondItem="TsM-zB-MH0" secondAttribute="bottom" constant="26" id="Hfc-1j-V7j"/>
+                            <constraint firstItem="TsM-zB-MH0" firstAttribute="leading" secondItem="23e-j7-9S5" secondAttribute="leading" constant="16" id="Z8n-wR-sy1"/>
+                            <constraint firstItem="23e-j7-9S5" firstAttribute="trailing" secondItem="TsM-zB-MH0" secondAttribute="trailing" constant="16" id="x59-5o-I3g"/>
+                            <constraint firstItem="TsM-zB-MH0" firstAttribute="top" secondItem="23e-j7-9S5" secondAttribute="top" constant="16" id="yWZ-XC-42h"/>
+                            <constraint firstItem="xFI-lm-cvC" firstAttribute="centerX" secondItem="23e-j7-9S5" secondAttribute="centerX" id="zaA-on-rf3"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add City" id="VED-8R-DKh"/>
+                    <navigationItem key="navigationItem" title="Add City" id="VED-8R-DKh">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="CzT-jd-srw">
+                            <connections>
+                                <action selector="close:" destination="5sE-WG-6Ne" id="6sI-8H-GFf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cityNameTextField" destination="TsM-zB-MH0" id="bY5-6L-83t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ttr-Tz-aGS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
