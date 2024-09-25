@@ -25,6 +25,8 @@
 		8B2EF72F2CA404050074E31E /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2EF72E2CA404050074E31E /* String+Extensions.swift */; };
 		8B2EF7312CA405E40074E31E /* WeatherListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2EF7302CA405E40074E31E /* WeatherListViewModel.swift */; };
 		8B2EF7332CA40A8B0074E31E /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2EF7322CA40A8B0074E31E /* Double+Extensions.swift */; };
+		8B2EF7352CA40CFE0074E31E /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2EF7342CA40CFE0074E31E /* SettingsTableViewController.swift */; };
+		8B2EF7372CA40D610074E31E /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2EF7362CA40D610074E31E /* SettingsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		8B2EF72E2CA404050074E31E /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		8B2EF7302CA405E40074E31E /* WeatherListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListViewModel.swift; sourceTree = "<group>"; };
 		8B2EF7322CA40A8B0074E31E /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		8B2EF7342CA40CFE0074E31E /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		8B2EF7362CA40D610074E31E /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,7 @@
 			children = (
 				8B2EF7182CA3F4580074E31E /* WeatherListTableViewController.swift */,
 				8B2EF71A2CA3F47A0074E31E /* AddWeatherCityViewController.swift */,
+				8B2EF7342CA40CFE0074E31E /* SettingsTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 			children = (
 				8B2EF7262CA402C30074E31E /* AddWeatherViewModel.swift */,
 				8B2EF7302CA405E40074E31E /* WeatherListViewModel.swift */,
+				8B2EF7362CA40D610074E31E /* SettingsViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -342,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B2EF7332CA40A8B0074E31E /* Double+Extensions.swift in Sources */,
+				8B2EF7352CA40CFE0074E31E /* SettingsTableViewController.swift in Sources */,
 				8B2EF72F2CA404050074E31E /* String+Extensions.swift in Sources */,
 				8B2EF7192CA3F4580074E31E /* WeatherListTableViewController.swift in Sources */,
 				8B2EF7272CA402C30074E31E /* AddWeatherViewModel.swift in Sources */,
@@ -353,6 +360,7 @@
 				8B2EF71B2CA3F47A0074E31E /* AddWeatherCityViewController.swift in Sources */,
 				8B2EF6EA2CA3F0130074E31E /* SceneDelegate.swift in Sources */,
 				8B2EF72A2CA403000074E31E /* Constants.swift in Sources */,
+				8B2EF7372CA40D610074E31E /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
