@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8B2EF6E82CA3F0130074E31E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2EF6E72CA3F0130074E31E /* AppDelegate.swift */; };
 		8B2EF6EA2CA3F0130074E31E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2EF6E92CA3F0130074E31E /* SceneDelegate.swift */; };
-		8B2EF6EC2CA3F0130074E31E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2EF6EB2CA3F0130074E31E /* ViewController.swift */; };
 		8B2EF6EF2CA3F0130074E31E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2EF6ED2CA3F0130074E31E /* Main.storyboard */; };
 		8B2EF6F12CA3F0140074E31E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B2EF6F02CA3F0140074E31E /* Assets.xcassets */; };
 		8B2EF6F42CA3F0140074E31E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2EF6F22CA3F0140074E31E /* LaunchScreen.storyboard */; };
@@ -39,7 +38,6 @@
 		8B2EF6E42CA3F0130074E31E /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B2EF6E72CA3F0130074E31E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B2EF6E92CA3F0130074E31E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8B2EF6EB2CA3F0130074E31E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8B2EF6EE2CA3F0130074E31E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B2EF6F02CA3F0140074E31E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B2EF6F32CA3F0140074E31E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 			children = (
 				8B2EF6E72CA3F0130074E31E /* AppDelegate.swift */,
 				8B2EF6E92CA3F0130074E31E /* SceneDelegate.swift */,
-				8B2EF6EB2CA3F0130074E31E /* ViewController.swift */,
 				8B2EF6ED2CA3F0130074E31E /* Main.storyboard */,
 				8B2EF6F02CA3F0140074E31E /* Assets.xcassets */,
 				8B2EF6F22CA3F0140074E31E /* LaunchScreen.storyboard */,
@@ -258,7 +255,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B2EF6EC2CA3F0130074E31E /* ViewController.swift in Sources */,
 				8B2EF6E82CA3F0130074E31E /* AppDelegate.swift in Sources */,
 				8B2EF6EA2CA3F0130074E31E /* SceneDelegate.swift in Sources */,
 			);
