@@ -11,19 +11,43 @@
         <!--Weather App-->
         <scene sceneID="hRW-Qi-xN4">
             <objects>
-                <tableViewController id="ZKa-2y-LY0" sceneMemberID="viewController">
+                <tableViewController id="ZKa-2y-LY0" customClass="WeatherListTableViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="cKJ-hA-ZC8">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="IHd-dK-OOl">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeatherCell" rowHeight="100" id="IHd-dK-OOl" customClass="WeatherCell" customModule="WeatherApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IHd-dK-OOl" id="5mn-66-3SJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sL3-yt-y0Q">
+                                            <rect key="frame" x="20" y="36.666666666666664" width="52" height="27"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9R-hY-WCW">
+                                            <rect key="frame" x="282" y="30.666666666666671" width="76" height="39"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="sL3-yt-y0Q" firstAttribute="leading" secondItem="5mn-66-3SJ" secondAttribute="leading" constant="20" symbolic="YES" id="Px8-QM-G3o"/>
+                                        <constraint firstItem="sL3-yt-y0Q" firstAttribute="centerY" secondItem="5mn-66-3SJ" secondAttribute="centerY" id="UKs-vh-TQT"/>
+                                        <constraint firstItem="t9R-hY-WCW" firstAttribute="centerY" secondItem="5mn-66-3SJ" secondAttribute="centerY" id="lgO-sN-Gog"/>
+                                        <constraint firstAttribute="trailing" secondItem="t9R-hY-WCW" secondAttribute="trailing" constant="35" id="nex-Nv-0f7"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cityNameLabel" destination="sL3-yt-y0Q" id="Fwd-hq-ekZ"/>
+                                    <outlet property="temperatureLabel" destination="t9R-hY-WCW" id="0MW-6c-6AW"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -47,7 +71,7 @@
         <!--Add City-->
         <scene sceneID="IGV-Me-cfH">
             <objects>
-                <viewController id="5sE-WG-6Ne" sceneMemberID="viewController">
+                <viewController id="5sE-WG-6Ne" customClass="AddWeatherCityViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9j8-OV-drx">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

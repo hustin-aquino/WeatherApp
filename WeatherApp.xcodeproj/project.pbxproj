@@ -15,6 +15,9 @@
 		8B2EF6FF2CA3F0140074E31E /* WeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2EF6FE2CA3F0140074E31E /* WeatherAppTests.swift */; };
 		8B2EF7092CA3F0140074E31E /* WeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2EF7082CA3F0140074E31E /* WeatherAppUITests.swift */; };
 		8B2EF70B2CA3F0140074E31E /* WeatherAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2EF70A2CA3F0140074E31E /* WeatherAppUITestsLaunchTests.swift */; };
+		8B2EF7192CA3F4580074E31E /* WeatherListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2EF7182CA3F4580074E31E /* WeatherListTableViewController.swift */; };
+		8B2EF71B2CA3F47A0074E31E /* AddWeatherCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2EF71A2CA3F47A0074E31E /* AddWeatherCityViewController.swift */; };
+		8B2EF71E2CA3F7C60074E31E /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2EF71D2CA3F7C60074E31E /* WeatherCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		8B2EF7042CA3F0140074E31E /* WeatherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B2EF7082CA3F0140074E31E /* WeatherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITests.swift; sourceTree = "<group>"; };
 		8B2EF70A2CA3F0140074E31E /* WeatherAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8B2EF7182CA3F4580074E31E /* WeatherListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListTableViewController.swift; sourceTree = "<group>"; };
+		8B2EF71A2CA3F47A0074E31E /* AddWeatherCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeatherCityViewController.swift; sourceTree = "<group>"; };
+		8B2EF71D2CA3F7C60074E31E /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,8 @@
 		8B2EF6E62CA3F0130074E31E /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				8B2EF71C2CA3F7AD0074E31E /* Custom Cells */,
+				8B2EF7172CA3F4460074E31E /* Controllers */,
 				8B2EF6E72CA3F0130074E31E /* AppDelegate.swift */,
 				8B2EF6E92CA3F0130074E31E /* SceneDelegate.swift */,
 				8B2EF6ED2CA3F0130074E31E /* Main.storyboard */,
@@ -122,6 +130,23 @@
 				8B2EF70A2CA3F0140074E31E /* WeatherAppUITestsLaunchTests.swift */,
 			);
 			path = WeatherAppUITests;
+			sourceTree = "<group>";
+		};
+		8B2EF7172CA3F4460074E31E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8B2EF7182CA3F4580074E31E /* WeatherListTableViewController.swift */,
+				8B2EF71A2CA3F47A0074E31E /* AddWeatherCityViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8B2EF71C2CA3F7AD0074E31E /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8B2EF71D2CA3F7C60074E31E /* WeatherCell.swift */,
+			);
+			path = "Custom Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,7 +280,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B2EF7192CA3F4580074E31E /* WeatherListTableViewController.swift in Sources */,
 				8B2EF6E82CA3F0130074E31E /* AppDelegate.swift in Sources */,
+				8B2EF71E2CA3F7C60074E31E /* WeatherCell.swift in Sources */,
+				8B2EF71B2CA3F47A0074E31E /* AddWeatherCityViewController.swift in Sources */,
 				8B2EF6EA2CA3F0130074E31E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
