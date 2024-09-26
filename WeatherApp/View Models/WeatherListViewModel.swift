@@ -10,6 +10,9 @@ import Foundation
 class WeatherListViewModel {
  
     private var weatherViewModels = [WeatherViewModel]()
+    var _weatherViewModels: [WeatherViewModel] {
+        return weatherViewModels
+    }
     
     func addWeatherViewModel(_ vm: WeatherViewModel) {
         weatherViewModels.append(vm)
